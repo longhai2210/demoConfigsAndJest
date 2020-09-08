@@ -5,8 +5,11 @@ import "index";
 
 console.log("webpack");
 
-const myFunc = (...params) => {
-	params.reduce((sum, prev) => (sum += prev));
+const adding = (params) => {
+	let total = params.reduce(function (sum, prev) {
+		return (sum += prev);
+	});
+	return total;
 };
 
 console.log(myFunc(1, 2, 3, 4));

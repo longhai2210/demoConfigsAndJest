@@ -1,8 +1,9 @@
 class TestController {
 	adding(params) {
-		params.reduce(function (sum, prev) {
+		let total = params.reduce(function (sum, prev) {
 			return (sum += prev);
 		});
+		return total;
 	}
 	subtract(a, b) {
 		return a - b;
